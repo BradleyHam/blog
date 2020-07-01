@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+
+h1,h2,h3,h4{
+    font-family: "Lora";
+    color: $darkBlue;
+}
+body{
+    font-family: "Ubuntu";
+    font-size: 18px;
+}
+
+h1{
+    font-size: 33px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 18px;
+}

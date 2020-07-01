@@ -1,0 +1,55 @@
+@import '../../style/variables';
+@import '../../style/mixins';
+
+
+.Header{
+    background: $lightGray;
+    padding: 50px 0;
+    &__content{
+        @include container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.Header__title{
+    h1{
+        margin: 0;
+    }
+    p{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+        letter-spacing: 1.7px;
+        color: $lightBlue;
+    }
+}
+
+.Header__nav{
+    ul{
+        display: flex;
+    }
+    ul > *:not(:last-child){
+        margin-right: 35px;
+    }
+    li{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $darkGray;
+        font-size: 16px;
+        cursor:pointer;
+        position: relative;
+    }
+    li.active::after{
+        @include navLine;
+    }
+    li::before{
+       @include navLine;
+        transform: scale(0);
+        transition: all .4s;
+    }
+    li:hover::before{
+        transform: scale(1);
+    }
+}
